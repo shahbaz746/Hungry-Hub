@@ -1,16 +1,47 @@
-# React + Vite
+# HungryHub 🍽️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**HungryHub** is a modern **recipe finder web app** built with **React.js** and **Tailwind CSS**.  
+It allows users to **search for any recipe**, explore different **food categories**, and view detailed meal instructions with images.  
 
-Currently, two official plugins are available:
+HungryHub is perfect for food lovers looking for inspiration or quick meals!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🔥 Features
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Search recipes** by name in real-time  
+- **Explore categories** like Seafood, Beef, Chicken, Vegetarian, and more  
+- **Responsive design** for desktop and mobile  
+- **Hover animations** and interactive UI  
+- **View detailed recipes** with instructions and source links  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js  
+- **Styling:** Tailwind CSS  
+- **Icons & Animations:** Lucide React, Framer Motion  
+- **API:** [TheMealDB](https://www.themealdb.com/api.php)  
+
+---
+
+## 🖼️ Preview
+
+![HungryHub Screenshot](./public/hungryhub-logo.png)  
+*Replace with your actual screenshots or GIFs of your app*  
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have **Node.js** and **npm** installed.
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/hungryhub.git
