@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search, Heart } from "lucide-react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -16,10 +16,8 @@ const Navbar = ({ search, setSearch, setCategory }) => {
     navigate("/");
   };
 
-  const linkClass =
-    "text-white hover:text-red-400 transition font-medium";
-  const activeClass =
-    "text-red-400 font-bold underline";
+  const linkClass = "text-white hover:text-red-400 transition font-medium";
+  const activeClass = "text-red-400 font-bold underline";
 
   return (
     <nav className="fixed w-full top-0 left-0 z-50 bg-black/60 backdrop-blur-md shadow-md">
@@ -28,7 +26,7 @@ const Navbar = ({ search, setSearch, setCategory }) => {
         <h1 className="text-2xl font-bold text-red-400">HungryHub</h1>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-4">
           <NavLink
             to="/"
             onClick={() => {
@@ -36,25 +34,19 @@ const Navbar = ({ search, setSearch, setCategory }) => {
               setCategory("");
               setIsOpen(false);
             }}
-            className={({ isActive }) =>
-              isActive ? activeClass : linkClass
-            }
+            className={({ isActive }) => (isActive ? activeClass : linkClass)}
           >
             Home
           </NavLink>
           <NavLink
             to="/about"
-            className={({ isActive }) =>
-              isActive ? activeClass : linkClass
-            }
+            className={({ isActive }) => (isActive ? activeClass : linkClass)}
           >
             About
           </NavLink>
           <NavLink
             to="/contact"
-            className={({ isActive }) =>
-              isActive ? activeClass : linkClass
-            }
+            className={({ isActive }) => (isActive ? activeClass : linkClass)}
           >
             Contact
           </NavLink>
@@ -93,6 +85,11 @@ const Navbar = ({ search, setSearch, setCategory }) => {
             />
             <Search className="absolute right-3 top-2.5 text-gray-600 w-5 h-5" />
           </div>
+
+          {/* Favorites Icon */}
+          <NavLink to="/favorites" className="ml-2 text-red-500 hover:text-red-400">
+            <Heart size={28} />
+          </NavLink>
         </div>
 
         {/* Mobile Menu Button */}
@@ -104,7 +101,7 @@ const Navbar = ({ search, setSearch, setCategory }) => {
         </button>
       </div>
 
-      {/* Mobile Dropdown with Animation */}
+      {/* Mobile Dropdown */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -178,6 +175,11 @@ const Navbar = ({ search, setSearch, setCategory }) => {
               />
               <Search className="absolute right-3 top-2.5 text-gray-600 w-5 h-5" />
             </div>
+
+            {/* Mobile Favorites */}
+            <NavLink to="/favorites" className="mt-3 text-red-500 hover:text-red-400">
+              <Heart size={28} />
+            </NavLink>
           </motion.div>
         )}
       </AnimatePresence>
